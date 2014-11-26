@@ -1,0 +1,2 @@
+Here is a simple module that creates shipment when an invoice is registered in the system. The module should only be used if you have "Capture" set in your payment method.
+Also, please test in a development environment before going live!

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<config>
+<modules>
+    <Tamedo_Autoshipment>
+        <version>0.1.0</version>
+    </Tamedo_Autoshipment>
+</modules>
+<global>
+    <models>
+        <autoshipment>
+            <class>Tamedo_Autoshipment_Model</class>
+            <resourceModel>autoshipment_mysql4</resourceModel>
+        </autoshipment>
+    </models>
+    <events>
+        <sales_order_invoice_register>
+            <observers>
+                <sales_order_invoice_register_handler>
+                    <type>model</type>
+                    <class>autoshipment/observer</class>
+                    <method>salesOrderInvoiceShipmentCreate</method>
+                </sales_order_invoice_register_handler>
+            </observers>
+        </sales_order_invoice_register>
+    </events>
+</global>
+</config>
